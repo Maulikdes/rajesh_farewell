@@ -8,18 +8,18 @@
     });
 
 
-    // MENU
-    $('.navbar-collapse a').on('click',function(){
-      $(".navbar-collapse").collapse('hide');
-    });
+    // // MENU
+    // $('.navbar-collapse a').on('click',function(){
+    //   $(".navbar-collapse").collapse('hide');
+    // });
 
-    $(window).scroll(function() {
-      if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-          } else {
-            $(".navbar-fixed-top").removeClass("top-nav-collapse");
-          }
-    });
+    // $(window).scroll(function() {
+    //   if ($(".navbar").offset().top > 50) {
+    //     $(".navbar-fixed-top").addClass("top-nav-collapse");
+    //       } else {
+    //         $(".navbar-fixed-top").removeClass("top-nav-collapse");
+    //       }
+    // });
 
 
     // PARALLAX EFFECT
@@ -29,7 +29,7 @@
 
 
     // ABOUT SLIDER
-    $('.owl-carousel').owlCarousel({
+    $('.owl-carousel-image').owlCarousel({
       animateOut: 'fadeOut',
       items: 1,
       loop: true,
@@ -38,16 +38,24 @@
       smartSpeed: 1000,
     });
 
+    $('.card').owlCarousel({
+      animateOut: 'fadeOut',
+      items: 1,
+      loop: true,
+      autoplayHoverPause: true,
+      autoplay: true,
+      smartSpeed: 1000,
+    });
 
     // SMOOTHSCROLL
-    $(function() {
-      $('.custom-navbar a').on('click', function(event) {
-        var $anchor = $(this);
-          $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - 49
-          }, 1000);
-            event.preventDefault();
-      });
-    });  
+    // $(function() {
+    //   $('.custom-navbar a').on('click', function(event) {
+    //     var $anchor = $(this);
+    //       $('html, body').stop().animate({
+    //         scrollTop: $($anchor.attr('href')).offset().top - 49
+    //       }, 1000);
+    //         event.preventDefault();
+    //   });
+    // });  
 
 })(jQuery);
