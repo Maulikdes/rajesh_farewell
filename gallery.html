@@ -2,8 +2,19 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <script src="js/main.js" type="text/javascript"></script>
 <body style="background: #333;" >
-<div  class="example" id="gall" style="display:none;" >
-    <img width="500px" src="https://lh3.googleusercontent.com/xIlb8w-81JMvcDUx1pbRaCz3qPfbGf3BOrOYBjRmeiTj2209aTI5sEnKcCrc1nzfywuSdHjpCH9Gm-cM2bt5Wvwlwq_tTsGtDkx5Bvriiw9zvcg5NoEJER6y2GWyl6ezgVfEIGiyXA=w1920-h1080" /><span></span>
+<div  class="example" id="gall" >
+
+</div>
+<span id="btn" style="position: absolute; left:48%; top:48%" onclick="start()" class="start-btn"> Start </span>
+</body>
+
+
+<audio id="audio" autoplay><source src="./mp3/57d7fcb72cf78.mp3" type="audio/mpeg"></audio>
+
+    <script>
+        function start(){
+            document.getElementById("audio").play();
+            document.getElementById("gall").innerHTML = `    <img width="500px" src="https://lh3.googleusercontent.com/xIlb8w-81JMvcDUx1pbRaCz3qPfbGf3BOrOYBjRmeiTj2209aTI5sEnKcCrc1nzfywuSdHjpCH9Gm-cM2bt5Wvwlwq_tTsGtDkx5Bvriiw9zvcg5NoEJER6y2GWyl6ezgVfEIGiyXA=w1920-h1080" /><span></span>
     <img width="500px" src="https://lh3.googleusercontent.com/V-e4z8YcP6doJsrRgfbygjwv7K-OoIW7PU4DOIhiLSS0L91DDRaRFQgsGXasrt9Q-ntmgsrz5mdonREUtorx2PHQ3Wt5yM71W5hWqBezWDaVFg0H-rq8hEb4aSD_4e6Nu_TnNJ7DSQ=w1920-h1080" /><span></span>
     <img width="500px" src="https://lh3.googleusercontent.com/kji0ATSEDWjwDQMZFbaTZGrQKKJ-nxoYudQNRFAEZ67liVaQmQqHRKK00rbuuz8ds_l8cacuRPm3Ezw07m-sSMSGfux2oglqj56w5u2RrwvoTlAoA1MurvVLy0xMmEj2PNSf0qiF0A=w1920-h1080" /><span></span>
     <img width="500px" src="https://lh3.googleusercontent.com/gk-mdEs25zBvaXkmgb6yrGCKILHivUIk_ZlUyEo7ZJ2MA5WTDntjul8J-sdfhaqI7KC2BR05NsiKwIMPp-cZRv58bWrIs6lTwrBTnvIAI54_3tlFtFa1UwnHstE-uwLUoyt5XDuFHg=w1920-h1080" /><span></span>
@@ -285,27 +296,18 @@
     <img width="500px" src="https://lh3.googleusercontent.com/M2BEA_8S3lGbOXW8hDBG2jMH02hZRpdtbqv6Mky3eR8NZlKCZT3_Ve1CtPlAbbgp8QLxyQyIK3k0rjRCFRGFi6BzUSuOzDKj5-ElkaRuHpyOuQQoPXxuxvfAhXxdvMq60IgB7bhggA=w1920-h1080" /><span></span>
     <img width="500px" src="https://lh3.googleusercontent.com/SZjK9wIFHpu5wdgz-C0MSJyJDGcckD57TAb2xxBJLgzQZ6FavFgSpB6XXN1N2Irwsg_dLdCKgz9o8OsE-ZSH9uBrP3V2bOPMKbHulggTwNqPDBEYrRoZAlZHg8xSO4dDtQv7uD8PgA=w1920-h1080" /><span></span>
     <img width="500px" src="https://lh3.googleusercontent.com/_3JLxzyTa8Vr7qU1Uq33rcAAYW1xszHJOK0MDXx4ZpQVI62K1F0MdPgjVfK2hE_HvMgW_vexJlo3AMH3dZeCpCz0AFc5xemZnnKKJfcGJuaezIVAW9dji95BJVXkKWjFm3q3a4dlxQ=w1920-h1080" /><span></span>
-    <img width="500px" src="https://lh3.googleusercontent.com/2agqfAky9aSDRJd5S9Sjm4_9-JCRTSxWJox9QX25YceY2x8HLhC6dfxU5TpKWVaeeXss2ryrOTqlb7mcLnQHM6jeyob_7enWjGqCJABN-ztM_HXaC8adOrGwFNjm2ZC53uZoYVWBFA=w1920-h1080" /><span></span>
-</div>
-<span id="btn" style="position: absolute; left:48%; top:48%" onclick="start()" class="start-btn"> Start </span>
-</body>
-
-
-<audio id="audio" autoplay><source src="./mp3/57d7fcb72cf78.mp3" type="audio/mpeg"></audio>
-
-    <script>
-        function start(){
-            document.getElementById("audio").play();
-            document.getElementById("gall").style.display = "block";
-            load()
+    <img width="500px" src="https://lh3.googleusercontent.com/2agqfAky9aSDRJd5S9Sjm4_9-JCRTSxWJox9QX25YceY2x8HLhC6dfxU5TpKWVaeeXss2ryrOTqlb7mcLnQHM6jeyob_7enWjGqCJABN-ztM_HXaC8adOrGwFNjm2ZC53uZoYVWBFA=w1920-h1080" /><span></span>`;
             document.getElementById("btn").style.display = "none";
+            setTimeout(function(){
+                load();
+            }, 2000);
         }
     </script>
 
     <style>
         @font-face {
-  font-family: 'Press Start 2p';
-}
+          font-family: 'Press Start 2p';
+        }
         .start-btn{
     text-align: center;
 	display: inline-block;
