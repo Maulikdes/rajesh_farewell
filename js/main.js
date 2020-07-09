@@ -115,7 +115,7 @@ document.onmousemove = function(e) {
     pgal.xm = (e.x || e.clientX) - pgal.nx - pgal.nw * .5;
     pgal.ym = (e.y || e.clientY) - pgal.ny - pgal.nh * .5;
 }
-window.onload = function() {
+window.load = function() {
     g_resize();
     pgal.init();
     document.onkeydown = checkKey;
